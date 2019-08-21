@@ -41,8 +41,8 @@ Traveller.prototype.getUniqueModesOfTransport = function () {
   const transport = this.journeys.map((journey) => {
     return journey.transport;
   })
-  let uniqueTransport = transport.filter((modeOfTransport, index) => {
-    return transport.indexOf(modeOfTransport) === index;
+  let uniqueTransport = transport.filter((usedTransport, index) => {
+    return transport.indexOf(usedTransport) === index;
   });
   return uniqueTransport;
 };
